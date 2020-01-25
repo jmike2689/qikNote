@@ -1,0 +1,33 @@
+{
+  "name": "passport_auth",
+  "version": "1.0.0",
+  "description": "Using Passport with Sequelize and MySQL",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jcrpelaez/passport_auth.git"
+  },
+  "author": "juan carlos pelaez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jcrpelaez/passport_auth/issues"
+  },
+  "homepage": "https://github.com/Jcrpelaez/passport_auth#readme",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "express-handlebars": "^3.1.0",
+    "express-session": "^1.17.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.1.0",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "sequelize": "^5.21.3"
+  }
+}
