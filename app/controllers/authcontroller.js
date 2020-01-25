@@ -8,6 +8,10 @@ exports.signin = function(req, res) {
   res.render("signin");
 };
 
+exports.cms = function(req, res){
+  res.render('cms');
+}
+
 exports.dashboard = function(req, res) {
   res.render("dashboard");
 };
