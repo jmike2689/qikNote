@@ -1,7 +1,8 @@
--- Drops the todolist if it exists currently --
 DROP DATABASE IF EXISTS sequelize_passport;
--- Creates the  database --
 CREATE DATABASE sequelize_passport;
+
+DROP DATABASE IF EXISTS note_db;
+CREATE DATABASE note_db;
 
 -- USE sequelize_passport
 
