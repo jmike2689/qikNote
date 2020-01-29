@@ -11,13 +11,11 @@ var db = require("../models");
 // Routes
 // =============================================================
 module.exports = function(app) {
-
   // GET route for getting all of the posts
   app.get("/api/posts/", function(req, res) {
-    db.Post.findAll({})
-      .then(function(dbPost) {
-        res.json(dbPost);
-      });
+    db.Post.findAll({}).then(function(dbPost) {
+      res.json(dbPost);
+    });
   });
 
   // Get route for returning posts of a specific category
@@ -26,10 +24,9 @@ module.exports = function(app) {
       where: {
         category: req.params.category
       }
-    })
-      .then(function(dbPost) {
-        res.json(dbPost);
-      });
+    }).then(function(dbPost) {
+      res.json(dbPost);
+    });
   });
 
   // Get route for retrieving a single post
@@ -38,10 +35,9 @@ module.exports = function(app) {
       where: {
         id: req.params.id
       }
-    })
-      .then(function(dbPost) {
-        res.json(dbPost);
-      });
+    }).then(function(dbPost) {
+      res.json(dbPost);
+    });
   });
 
   // POST route for saving a new post
@@ -51,10 +47,9 @@ module.exports = function(app) {
       title: req.body.title,
       body: req.body.body,
       category: req.body.category
-    })
-      .then(function(dbPost) {
-        res.json(dbPost);
-      });
+    }).then(function(dbPost) {
+      res.json(dbPost);
+    });
   });
 
   // DELETE route for deleting posts
@@ -63,22 +58,19 @@ module.exports = function(app) {
       where: {
         id: req.params.id
       }
-    })
-      .then(function(dbPost) {
-        res.json(dbPost);
-      });
+    }).then(function(dbPost) {
+      res.json(dbPost);
+    });
   });
 
   // PUT route for updating posts
   app.put("/api/posts", function(req, res) {
-    db.Post.update(req.body,
-      {
-        where: {
-          id: req.body.id
-        }
-      })
-      .then(function(dbPost) {
-        res.json(dbPost);
-      });
+    db.Post.update(req.body, {
+      where: {
+        id: req.body.id
+      }
+    }).then(function(dbPost) {
+      res.json(dbPost);
+    });
   });
 };
