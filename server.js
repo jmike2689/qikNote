@@ -6,18 +6,18 @@ var exphbs = require("express-handlebars");
 var PORT = process.env.PORT || 5000;
 var mysql = require("mysql");
 
-var connection;
-if (process.env.JAWSDB_URL) {
-  connection = mysql.createConnection(process.env.JAWSDB_URL);
-} else {
-  connection = mysql.createConnection({
-    host: "localhost",
-    port: 3306,
-    user: "root",
-    password: "olives13",
-    database: "sequelize_passport"
-  });
-}
+// var connection;
+// if (process.env.JAWSDB_URL) {
+//   connection = mysql.createConnection(process.env.JAWSDB_URL);
+// } else {
+//   connection = mysql.createConnection({
+//     host: "localhost",
+//     port: 3306,
+//     user: "root",
+//     password: "olives13",
+//     database: "sequelize_passport"
+//   });
+// }
 
 //Setup public directory
 app.use(express.static("app/public"));
