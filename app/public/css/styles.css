@@ -2,6 +2,17 @@ button.submit {
   float: right;
 }
 
+.myButton {
+  padding: 10px;
+  display: block;
+  background-color: rgb(40, 94, 104);
+  color: white;
+  text-align: center;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
 form#cms {
   margin-top: 50px;
 }
@@ -17,21 +28,26 @@ button.edit {
   color: white;
 }
 .card-header {
-  background-color: rgb(8, 44, 8);
+  background-color: rgb(40, 94, 104);
   color: white;
   opacity: 90%;
+  padding: 10px;
 }
 
 .card-body {
   color: black;
   margin-top: 20px;
+  /* padding: 0px; */
 }
 #signin-card {
   margin: 80px 100px 80px 100px;
 }
+#signup-card {
+  margin: 80px 100px 80px 100px;
+}
 
 #card-title {
-  background-color: rgb(8, 44, 8);
+  background-color: rgb(40, 94, 104);
   color: white;
   opacity: 90%;
 }
@@ -52,4 +68,30 @@ button.edit {
 .date-container {
   font-size: 10px;
   padding: 20px;
+  white-space: pre-line;
 }
+.note-container {
+  margin-top: 0px;
+}
+.datetime {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 150px;
+  opacity: 80%;
+  color: white;
+}
+body {
+  background-color: rgb(100, 95, 131);
+}
+
+.h2 {
+  text-align: center;
+}
+/* .card {
+  width: 750px;
+  margin-top: 80px;
+  padding: 30px;
+  clear: both;
+  background-color: rgb(36, 26, 26);
+  opacity: 50%;
+} */
