@@ -74,7 +74,7 @@ $(document).ready(function() {
       url: "/api/posts",
       data: post
     }).then(function() {
-      window.location.href = "/post";
+      window.location.href = "/dashboard";
     });
   }
 });
