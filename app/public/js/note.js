@@ -56,7 +56,7 @@ $(document).ready(function() {
     newPostCardHeading.addClass("card-header");
     var deleteBtn = $("<button>");
     deleteBtn.text("x");
-    deleteBtn.addClass("delete btn btn-danger");
+    deleteBtn.addClass("delete btn btn-secondary");
     var editBtn = $("<button>");
     editBtn.text("EDIT");
     editBtn.addClass("edit btn btn-default");
@@ -76,7 +76,9 @@ $(document).ready(function() {
     newPostBody.text(post.body);
     var formattedDate = new Date(post.createdAt);
     formattedDate = moment(formattedDate).format("MMMM Do YYYY");
+    // var br = $("<br>");
     newPostDate.text(formattedDate);
+    newPostDate.addClass("date-container");
     newPostTitle.append(newPostDate);
     newPostCardHeading.append(deleteBtn);
     newPostCardHeading.append(editBtn);
