@@ -22,6 +22,7 @@ $(document).ready(function() {
   // Adding an event listener for when the form is submitted
   $(cmsForm).on("submit", function handleFormSubmit(event) {
     event.preventDefault();
+    console.log("working");
     // Wont submit the post if we are missing a body or a title
     if (!titleInput.val().trim() || !bodyInput.val().trim()) {
       return;
@@ -48,7 +49,7 @@ $(document).ready(function() {
   // Submits a new post and brings user to blog page upon completion
   function submitPost(Post) {
     $.post("/api/posts/", Post, function() {
-      window.location.href = "/note";
+      window.location.href = "/post";
     });
   }
 
@@ -67,14 +68,13 @@ $(document).ready(function() {
     });
   }
 
-  // Update a given post, bring user to the blog page when done
   function updatePost(post) {
     $.ajax({
       method: "PUT",
       url: "/api/posts",
       data: post
     }).then(function() {
-      window.location.href = "/note";
+      window.location.href = "/post";
     });
   }
 });
