@@ -57,11 +57,11 @@ require("./app/routes/api-routes.js")(app);
 // Sync Database and listen to local server
 models.sequelize
   .sync()
-  .then(function() {
-    app.listen(PORT, function(err) {
+  .then(function () {
+    app.listen(PORT, function (err) {
       console.log("Server is running on port 5000 and database looks fine");
     });
   })
-  .catch(function(err) {
+  .catch(function (err) {
     console.log(err, "Something went wrong with the Database Update!");
   });
