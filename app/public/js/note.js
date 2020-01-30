@@ -1,3 +1,10 @@
+// var dt = new Date();
+// document.getElementById("datetime").innerHTML = dt.toLocaleTimeString();
+var dt = new Date();
+document.getElementById("datetime").innerHTML = moment().format("h:mm");
+
+// formattedDate = moment(formattedDate).format("MMMM Do YYYY");
+
 $(document).ready(function() {
   // blogContainer holds all of our posts
   var noteContainer = $(".note-container");
@@ -60,9 +67,9 @@ $(document).ready(function() {
     var editBtn = $("<button>");
     editBtn.text("EDIT");
     editBtn.addClass("edit btn btn-default");
-    var newPostTitle = $("<h2>");
+    var newPostTitle = $("<h4>");
     var newPostDate = $("<small>");
-    var newPostCategory = $("<h5>");
+    var newPostCategory = $("<p>");
     newPostCategory.text(post.category);
     newPostCategory.css({
       float: "right",
@@ -76,7 +83,7 @@ $(document).ready(function() {
     newPostBody.text(post.body);
     var formattedDate = new Date(post.createdAt);
     formattedDate = moment(formattedDate).format("MMMM Do YYYY");
-    // var br = $("<br>");
+    var newPostDate = $("<p>");
     newPostDate.text(formattedDate);
     newPostDate.addClass("date-container");
     newPostTitle.append(newPostDate);
@@ -114,9 +121,9 @@ $(document).ready(function() {
   // This function displays a message when there are no posts
   function displayEmpty() {
     noteContainer.empty();
-    var messageH2 = $("<h2>");
+    var messageH2 = $("<h3>");
     messageH2.css({ "text-align": "center", "margin-top": "50px" });
-    messageH2.html("No notes have been created :)");
+    messageH2.html("Hello, what would you like to note today?");
     noteContainer.append(messageH2);
   }
 

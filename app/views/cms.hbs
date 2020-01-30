@@ -7,19 +7,24 @@
     <!-- Latest compiled and minified CSS & JS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/flatly/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/styles.css" media="screen" title="no title" />
-    <script src="https://code.jquery.com/jquery.js"></script>
+    {{!-- <script src="https://code.jquery.com/jquery.js"></script> --}}
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin=""></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
 
 <body>
+    <a href="/signin" class="myButton">Sign Out</a>
+
+    {{!-- body --}}
     <div class="container3">
         <div class="row">
-            <div class="row">
+            {{!-- <div class="row">
                 <div class="col-sm-2 mt-4">
                     <a class="btn btn-light" href="/dashboard">Go to Notes</a>
                 </div>
-            </div>
-            <div class="col-md-5 offset-md-3">
+            </div> --}}<h2>Make a qikNote</h2>
+            <div class="container">
                 <form id="cms">
                     <div class="form-group">
                         <label for="title">Title:</label>
@@ -36,9 +41,34 @@
                             </select>
                         </div>
                         <br />
-                        <button type="submit" class="btn btn-success submit btn-lg">
+
+                        <div class="row">
+                            <div class="col-sm-2 mt-4">
+                                <a class="btn btn-light" href="/dashboard">Go to Notes</a>
+                            </div>
+                            <div class="col-sm-2 mt-4">
+
+                            </div>
+                            <div class="col-sm-2 mt-4">
+
+                            </div>
+                            <div class="col-sm-2 mt-4">
+
+                            </div>
+                            <div class="col-sm-2 mt-4">
+
+                            </div>
+
+                            <div class="col-sm-2 mt-4">
+                                <button type="submit" class="btn btn-success submit btn-lg">
+                                    Submit
+                                </button>
+                            </div>
+                        </div>
+
+                        {{!-- <button type="submit" class="btn btn-success submit btn-lg">
                             Submit
-                        </button>
+                        </button> --}}
                     </div>
                 </form>
             </div>
