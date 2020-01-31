@@ -1,14 +1,23 @@
-# passport_auth
-
-This is a user login and registration app using Node.js, Express, Passport, MySql and Handlebars.
-
-# How to use
-
-1. Clone the repo
-2. Perfom an `$ npm install`
-3. Add your MySql password in the config.json file
-4. In your terminal Run `$ node server.js` or `$ nodemon server.js`
-
-# Visit http://localhost:5000
-
-Credit https://code.tutsplus.com/tutorials/using-passport-with-sequelize-and-mysql--cms-27537 for the walk through.
+# qikNote
+## Description
+Create, Edit and Delete different notes you need. Categorize the notes as well in 1 of our 3 categories for easier organization.
+## How to install necessary packages
+   ```   
+   git clone https://github.com/jmike2689/qikNote.git
+   ```
+   ```
+   npm install
+   ```
+### Preview Here
+https://qiknote-application.herokuapp.com/
+#### Technologies
+1. Javascript
+2. Node.js
+3. Node Packages
+   - express
+   - exphbs
+   - passport
+   - sequelize
+4. MySQL
+5. CSS
+6. Bootstrap
