@@ -1,19 +1,18 @@
 {
   "local": {
     "username": "root",
-    "password": "olives13",
+    "password": "Charger!36",
     "database": "note_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "development": {
     "username": "root",
-    "password": "olives13",
+    "password": "Charger!36",
     "database": "sequelize_passport",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
-
   "test": {
     "username": "root",
     "password": null,

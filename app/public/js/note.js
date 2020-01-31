@@ -1,27 +1,23 @@
-// var dt = new Date();
-// document.getElementById("datetime").innerHTML = dt.toLocaleTimeString();
 var dt = new Date();
 document.getElementById("datetime").innerHTML = moment().format("h:mm");
 
-// formattedDate = moment(formattedDate).format("MMMM Do YYYY");
+$(document).ready(function () {
 
-$(document).ready(function() {
-  // blogContainer holds all of our posts
   var noteContainer = $(".note-container");
   var postCategorySelect = $("#category");
-  // Click events for the edit and delete buttons
+
   $(document).on("click", "button.delete", handlePostDelete);
   $(document).on("click", "button.edit", handlePostEdit);
   postCategorySelect.on("change", handleCategoryChange);
   var posts;
 
-  // This function grabs posts from the database and updates the view
+
   function getPosts(category) {
     var categoryString = category || "";
     if (categoryString) {
       categoryString = "/category/" + categoryString;
     }
-    $.get("/api/posts" + categoryString, function(data) {
+    $.get("/api/posts" + categoryString, function (data) {
       console.log("Posts", data);
       posts = data;
       if (!posts || !posts.length) {
@@ -32,20 +28,19 @@ $(document).ready(function() {
     });
   }
 
-  // This function does an API call to delete posts
+
   function deletePost(id) {
     $.ajax({
       method: "DELETE",
       url: "/api/posts/" + id
-    }).then(function() {
+    }).then(function () {
       getPosts(postCategorySelect.val());
     });
   }
 
-  // Getting the initial list of posts
+
   getPosts();
-  // InitializeRows handles appending all of our constructed post HTML inside
-  // blogContainer
+
   function initializeRows() {
     noteContainer.empty();
     var postsToAdd = [];
@@ -55,7 +50,6 @@ $(document).ready(function() {
     noteContainer.append(postsToAdd);
   }
 
-  // This function constructs a post's HTML
   function createNewRow(post) {
     var newPostCard = $("<div>");
     newPostCard.addClass("card");
@@ -98,8 +92,7 @@ $(document).ready(function() {
     return newPostCard;
   }
 
-  // This function figures out which post we want to delete and then calls
-  // deletePost
+
   function handlePostDelete() {
     var currentPost = $(this)
       .parent()
@@ -108,8 +101,7 @@ $(document).ready(function() {
     deletePost(currentPost.id);
   }
 
-  // This function figures out which post we want to edit and takes it to the
-  // Appropriate url
+
   function handlePostEdit() {
     var currentPost = $(this)
       .parent()
@@ -118,7 +110,6 @@ $(document).ready(function() {
     window.location.href = "/cms?post_id=" + currentPost.id;
   }
 
-  // This function displays a message when there are no posts
   function displayEmpty() {
     noteContainer.empty();
     var messageH2 = $("<h3>");
@@ -127,7 +118,6 @@ $(document).ready(function() {
     noteContainer.append(messageH2);
   }
 
-  // This function handles reloading new posts when the category changes
   function handleCategoryChange() {
     var newPostCategory = $(this).val();
     getPosts(newPostCategory);
